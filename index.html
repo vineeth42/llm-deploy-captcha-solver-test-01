@@ -1,42 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalistic Calculator</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Black & White Calculator</title>
+  <meta name="description" content="A minimal black-and-white calculator web app." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" class="calculator-screen" value="" disabled />
-        <div class="buttons">
-            <button class="operator" value="+">+</button>
-            <button class="operator" value="-">-</button>
-            <button class="operator" value="*">*</button>
-            <button class="operator" value="/">/</button>
+  <header class="app-header">
+    <h1>Calculator</h1>
+  </header>
 
-            <button value="7">7</button>
-            <button value="8">8</button>
-            <button value="9">9</button>
+  <main class="container">
+    <!-- Image section: displays an image provided via the query parameter ?url=... -->
+    <section id="image-section" class="image-section" aria-label="External image">
+      <p id="image-hint" class="image-hint">Tip: Append ?url=https://example.com/image.png to display an image.</p>
+      <img id="external-image" class="external-image" alt="Image from url parameter" />
+    </section>
 
-            <button value="4">4</button>
-            <button value="5">5</button>
-            <button value="6">6</button>
+    <!-- Calculator -->
+    <section class="calculator" aria-label="Calculator">
+      <div class="calculator-display" role="textbox" aria-label="Calculator display" aria-live="polite">0</div>
+      <div class="calculator-keys" role="group" aria-label="Calculator keys">
+        <!-- Top row -->
+        <button type="button" class="key key-func" data-action="clear" value="C" aria-label="Clear">C</button>
+        <button type="button" class="key key-func" data-action="delete" value="⌫" aria-label="Delete">⌫</button>
+        <button type="button" class="key key-func" data-action="percent" value="%" aria-label="Percent">%</button>
+        <button type="button" class="key key-op" data-action="operator" value="/" aria-label="Divide">÷</button>
 
-            <button value="1">1</button>
-            <button value="2">2</button>
-            <button value="3">3</button>
+        <!-- Row 2 -->
+        <button type="button" class="key" data-action="digit" value="7">7</button>
+        <button type="button" class="key" data-action="digit" value="8">8</button>
+        <button type="button" class="key" data-action="digit" value="9">9</button>
+        <button type="button" class="key key-op" data-action="operator" value="*" aria-label="Multiply">×</button>
 
-            <button value="0">0</button>
-            <button class="dot" value=".">.</button>
-            <button class="all-clear" value="all-clear">AC</button>
+        <!-- Row 3 -->
+        <button type="button" class="key" data-action="digit" value="4">4</button>
+        <button type="button" class="key" data-action="digit" value="5">5</button>
+        <button type="button" class="key" data-action="digit" value="6">6</button>
+        <button type="button" class="key key-op" data-action="operator" value="-" aria-label="Subtract">−</button>
 
-            <button class="equal-sign operator" value="=">=</button>
-        </div>
-    </div>
-    <div class="image-container">
-        <img id="image-from-url" src="" alt="From URL">
-    </div>
+        <!-- Row 4 -->
+        <button type="button" class="key" data-action="digit" value="1">1</button>
+        <button type="button" class="key" data-action="digit" value="2">2</button>
+        <button type="button" class="key" data-action="digit" value="3">3</button>
+        <button type="button" class="key key-op" data-action="operator" value="+" aria-label="Add">+</button>
+
+        <!-- Row 5 -->
+        <button type="button" class="key key-func" data-action="sign" value="±" aria-label="Toggle sign">±</button>
+        <button type="button" class="key" data-action="digit" value="0">0</button>
+        <button type="button" class="key" data-action="decimal" value=".">.</button>
+        <button type="button" class="key key-op key-equals" data-action="operator" value="=" aria-label="Equals">=</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>MIT License • Black & White Calculator</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
