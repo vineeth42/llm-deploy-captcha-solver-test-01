@@ -1,14 +1,19 @@
-# My Captcha Solver
+# Minimalistic Calculator
 
 ## Summary
-My Captcha Solver is a simple web application that displays a captcha image from a given URL and allows users to enter the captcha text through an input box. This project demonstrates basic HTML, CSS, and JavaScript skills for handling URL parameters and interacting with the DOM.
+This is a minimalistic calculator web application built using HTML, CSS, and JavaScript. The design is simple and utilizes a black and white color scheme to keep it clean and functional.
 
 ## Setup
-No special setup is required for this project. Simply open the `index.html` file in a web browser. You can also pass a URL to the image as a query parameter using `?url=image_url`.
+To get started, simply download the files and open `index.html` in a web browser. No additional setup or dependencies are required.
 
 ## Usage
-- To display a captcha from a specific URL, open `index.html` and add `?url=your_image_url` to the URL bar. For example: `index.html?url=https://example.com/captcha.png`.
-- If no URL is provided, a placeholder image will be displayed by default.
+- The calculator supports basic arithmetic operations: addition, subtraction, multiplication, and division.
+- It includes a display screen to show input and results.
+- You can reset the calculator using the "AC" button.
+- To display an image, append the URL of the image as a query parameter to the page URL, e.g., `index.html?url=http://example.com/image.jpg`.
 
 ## License
-This project is licensed under the MIT License. Please see the LICENSE file for more details.
+This project is licensed under the MIT License.
+
+---
+Feel free to explore and contribute to the project!
