@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var imageUrl = new URLSearchParams(window.location.search).get('url') || 'https://via.placeholder.com/300?text=Captcha';
-    document.getElementById('captchaImage').src = imageUrl;
+document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const imageUrl = urlParams.get("url") || "https://via.placeholder.com/300x150?text=Placeholder";
+    const captchaImage = document.getElementById("captcha-image");
+    captchaImage.src = imageUrl;
 });
