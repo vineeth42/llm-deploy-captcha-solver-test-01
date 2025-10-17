@@ -1,54 +1,112 @@
+/*
+  Black & White Calculator
+  Color scheme: strictly black (#000) and white (#fff) and their transparency.
+  License: MIT
+*/
+
+:root {
+  --black: #000;
+  --white: #fff;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #fff;
-    color: #000;
-    margin: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
 }
 
+.app-header, .app-footer {
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--white);
+}
+
+.app-footer { border-top: 1px solid var(--white); border-bottom: none; margin-top: auto; }
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  margin: 1rem auto;
+  padding: 0 1rem 2rem;
+}
+
+/* Image section */
+.image-section {
+  border: 1px solid var(--white);
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.image-hint {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--white);
+}
+
+.external-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--black);
+  border: 1px dashed var(--white);
+}
+
+/* Calculator */
 .calculator {
-    border: 1px solid #000;
-    width: 320px;
+  border: 1px solid var(--white);
+  padding: 1rem;
 }
 
-.calculator-screen {
-    width: 100%;
-    height: 40px;
-    border: none;
-    background-color: #fff;
-    text-align: right;
-    padding-right: 10px;
-    padding-left: 10px;
-    font-size: 24px;
+.calculator-display {
+  width: 100%;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  text-align: right;
+  padding: 0.75rem;
+  border: 1px solid var(--white);
+  margin-bottom: 0.75rem;
+  background: var(--black);
+  color: var(--white);
+  min-height: 3.25rem;
 }
 
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
 }
 
-button {
-    height: 60px;
-    border: none;
-    background-color: #000;
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.key {
+  appearance: none;
+  border: 1px solid var(--white);
+  background: var(--white);
+  color: var(--black);
+  padding: 0.85rem 0.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 
-button:hover {
-    background-color: #333;
+.key:focus { outline: 2px solid var(--white); outline-offset: 2px; }
+
+/* Operators and function keys are inverted */
+.key-op, .key-func, .key-equals {
+  background: var(--black);
+  color: var(--white);
 }
 
-.image-container {
-    margin-top: 20px;
-}
+/* Active/Hover states: invert for clear affordance, still B/W only */
+.key:hover { filter: invert(1); }
+.key:active { transform: translateY(1px); }
 
-#image-from-url {
-    max-width: 100%;
+/* Responsive tweaks */
+@media (max-width: 360px) {
+  .calculator-display { font-size: 2rem; }
+  .key { font-size: 1.1rem; padding: 0.75rem 0.45rem; }
 }
