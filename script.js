@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var defaultImageUrl = 'https://via.placeholder.com/300x100?text=Captcha';
+document.addEventListener('DOMContentLoaded', function () {
     var imageUrl = new URLSearchParams(window.location.search).get('url');
-    document.getElementById('captchaImage').src = imageUrl || defaultImageUrl;
+    var imageElement = document.getElementById('captchaImage');
+    imageElement.src = imageUrl ? imageUrl : 'https://via.placeholder.com/150';
 });
