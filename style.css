@@ -1,17 +1,11 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    background-color: #f4f4f4;
     font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
 }
-
 img {
     max-width: 100%;
     height: auto;
-    border: 1px solid #ccc;
-    padding: 5px;
-    background: white;
+    border: 2px solid #ccc;
+    margin-top: 20px;
 }
