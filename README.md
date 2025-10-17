@@ -1,19 +1,14 @@
 # My Captcha Solver
 
 ## Summary
-This project provides a simple web application that displays an image based on a URL query parameter. It is designed to work as a standalone application with minimal dependencies.
+My Captcha Solver is a simple web application that displays a captcha image from a given URL and allows users to enter the captcha text through an input box. This project demonstrates basic HTML, CSS, and JavaScript skills for handling URL parameters and interacting with the DOM.
 
 ## Setup
-To run this project, clone the repository to your local machine.
+No special setup is required for this project. Simply open the `index.html` file in a web browser. You can also pass a URL to the image as a query parameter using `?url=image_url`.
 
 ## Usage
-Open `index.html` in your browser. To change the displayed image, append `?url=` followed by the image URL to the page's URL in the browser.
-
-Example usage with a custom image URL:
-
-```
-index.html?url=https://example.com/image.jpg
-```
+- To display a captcha from a specific URL, open `index.html` and add `?url=your_image_url` to the URL bar. For example: `index.html?url=https://example.com/captcha.png`.
+- If no URL is provided, a placeholder image will be displayed by default.
 
 ## License
-This project is open-sourced under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License. Please see the LICENSE file for more details.
