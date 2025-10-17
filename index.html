@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Captcha Solver</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Captcha Solver</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>My Captcha Solver</h1>
-<img id="captchaImage" src="" alt="Captcha">
-<script src="script.js"></script>
+    <h1>My Captcha Solver</h1>
+    <div class="captcha-container">
+        <img id="captcha-image" src="" alt="Captcha Image" />
+        <input type="text" id="captcha-input" placeholder="Enter captcha text" />
+        <button id="submit-button">Submit</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
